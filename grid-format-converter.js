@@ -38,16 +38,3 @@ function main() {
 }
 
 main();
-
-
-
-
-
-
-// const stringfied = JSON.stringify(gridsInNewFormat, null, 4);
-
-
-
-// console.log(getGridsInNewFormat());
-
-// console.log(stringfied);
