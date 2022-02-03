@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "fs": "0.0.1-security",
     "pg": "^8.7.1",
     "request": "^2.88.2"
   },

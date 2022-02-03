@@ -1,19 +1,15 @@
 import PromiseConsumer from './promise_consumer.js';
 import VenuePromiseProducer from './venue_promise_producer.js';
 
-
+import GridSplitter from './grid_splitter.js';
+import GridOverwriter from './grid_overwriter.js';
 
 function main() {
-    const lon = 32.811;
-    const lat = 39.891;
-    const coordinates = [{
-        index: 0,
-        lon: lon,
-        lat: lat
-    }]
-
-    const venuesPromises = new VenuePromiseProducer().produce(coordinates)
+    const splitGrids = new GridSplitter().split();
+    const venuesPromises = new VenuePromiseProducer().produce(splitGrids)
     new PromiseConsumer().consume(venuesPromises)
+    new GridOverwriter().overwrite()
 }
+
 
 main();
