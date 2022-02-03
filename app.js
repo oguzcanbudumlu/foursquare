@@ -1,13 +1,19 @@
-const PoolFacade  = require('./pool-facade.js');
+import PromiseConsumer from './promise_consumer.js';
+import VenuePromiseProducer from './venue_promise_producer.js';
 
-const poolFacade = PoolFacade.create();
 
-poolFacade.addVenue({
-    venueId: 'dsadsdasddfs',
-    name: 'B',
-    category: 'C',
-    address: 'D',
-    likes: 2,
-    lon: 3,
-    lat: 5
-});
+
+function main() {
+    const lon = 32.811;
+    const lat = 39.891;
+    const coordinates = [{
+        index: 0,
+        lon: lon,
+        lat: lat
+    }]
+
+    const venuesPromises = new VenuePromiseProducer().produce(coordinates)
+    new PromiseConsumer().consume(venuesPromises)
+}
+
+main();
