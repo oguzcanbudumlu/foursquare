@@ -12,7 +12,7 @@ export default {
         "clientSecret": "KGQBKCQUPR4RKCYI5YDM4YE3HNYUNGSBKHSGHQNZ3ZJVLNYG",
         "version": 20210621,
     },
-    "gridsFileName": "grids_ordered.json",
+    "gridsFileName": "grids_indexed.json",
     "gridCount": 3
 }
 
